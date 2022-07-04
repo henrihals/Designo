@@ -1,0 +1,124 @@
+@media only screen and (max-width: 1023px) {
+
+    .header__box {
+        max-width: 689px;
+        height: 252px;
+    }
+
+    .main__first {
+        max-width: 689px;
+        margin-bottom: 120px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        justify-items: stretch;
+        grid-template-areas: 
+            "."
+            "."
+            "."
+            "."
+            ".";
+
+            .__first__box {
+            max-width: 689px;
+            height: 310px;
+            display: flex;
+
+
+            .__box__image {
+                height: 310px;
+                min-width: 339px;
+            }
+
+            .__box__write {
+                height: 310px;
+                width: initial;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 0px;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .__write__title {
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
+
+    .main__second {
+        width: 689px;
+        margin-bottom: 120px;
+        display: block;
+
+        .__box__image1 {
+            width: 689px;
+            height: 200px;
+        }
+
+        .__second__write {
+            width: 689px;
+            height: 200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .header__box {
+        width: 375px;
+        height: 320px;
+        background-image: url(../../../src/img/fond-mobile-orange.png);
+
+        .h1 {
+            width: 375px;
+        }
+
+        .__box__text {
+            width: 375px;
+        }
+    }
+
+    .main__first {
+        width: 327px;
+        margin-bottom: 120px;
+
+        .__first__box {
+            width: 327px;
+            flex-direction: column;
+            height: initial;
+            align-items: center;
+
+            .__first__image {
+                width: 327px;
+            }
+
+            .__first__write {
+                width: 327px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+    }
+
+    .main__second {
+        width: 689px;
+        margin-bottom: 120px;
+        display: block;
+
+        .__box__image1 {
+            width: 327px;
+            height: 250px;
+        }
+
+        .__second__write {
+            width: 327px;
+            height: 250px;
+        }
+    }
+}

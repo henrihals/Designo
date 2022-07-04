@@ -1,0 +1,111 @@
+/* color */
+
+$peach: #e7816b;
+$lightPeach: #ffad9b;
+$black: #1d1c1e;
+$darkGrey: #333136;
+$white: #ffffff;
+$lightGrey: #f1f3f5;
+$beige: #FDF3F0;
+
+/* media queries */
+
+@mixin tablet {
+    @media screen and (max-width: 1023px) {
+        @content
+    }
+
+    ;
+}
+
+@mixin mobile {
+    @media screen and (max-width: 500px) {
+        @content
+    }
+
+    ;
+}
+
+@mixin img_display {
+
+    &.tablet {
+        display: none;
+    }
+
+    &.mobile {
+        display: none;
+    }
+
+    &.desktop {
+        display: block;
+    }
+
+    @include tablet {
+        &.tablet {
+            display: block;
+        }
+
+        &.mobile {
+            display: none;
+        }
+
+        &.desktop {
+            display: none;
+        }
+    }
+
+    @include mobile {
+        &.tablet {
+            display: none;
+        }
+
+        &.mobile {
+            display: block;
+        }
+
+        &.desktop {
+            display: none;
+        }
+    }
+}
+
+/* button */
+
+button {
+    height: 56px;
+    width: 152px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    &.dark {
+        color: $darkGrey;
+    }
+
+    &.light {
+        color: $white;
+        background: $peach;
+    }
+
+    &:hover {
+        background-color: $lightPeach;
+        color: $white;
+    }
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: $black;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px $darkGrey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $peach;
+    border-radius: 5px;
+    opacity: 1;
+}

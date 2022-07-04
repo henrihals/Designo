@@ -1,0 +1,190 @@
+body {
+    .shape_header {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    .shape_footer {
+        @include tablet {
+            display: none;
+        }
+    }
+
+    header {
+        .article_header {
+            @include tablet {
+                max-width: 689px;
+                height: 843px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            @include mobile {
+                width: 100%;
+                border-radius: initial;
+                height: initial;
+                padding: 0;
+            }
+
+            .container-txt_article_header {
+                @include tablet {
+                    max-width: 573px;
+                    margin-top: 60px;
+                    margin-bottom: 69px;
+                }
+
+                @include mobile {
+                    max-width: 327px;
+                    margin: 80px auto;
+                }
+
+                .title_article_header {
+                    @include tablet {
+                        margin: 0 auto;
+                        margin-bottom: 29px;
+                    }
+
+                    @include mobile {
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .txt_article_header {
+                    @include tablet {
+                        margin: 0 auto;
+                        margin-bottom: 19px;
+                    }
+
+                    @include mobile {
+                        font-size: 15px;
+                        line-height: 25px;
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+
+            .container-img_article_header {
+                @include tablet {
+                    align-self: initial;
+                }
+
+                .img_article_header {
+                    @include img_display;
+                }
+            }
+
+            .circle_header {
+                @include tablet {
+                    top: 102px;
+                    right: -122px;
+                }
+
+                @include mobile {
+                    right: -265px;
+                }
+            }
+        }
+    }
+
+    main {
+        .projects {
+            @include tablet {
+                display: flex;
+                max-width: 689px;
+                margin: 120px auto;
+                flex-direction: column;
+            }
+
+            @include mobile {
+                max-width: 327px;
+            }
+
+            .article_projects {
+                a {
+                    .container-img_article_projects {
+                        @include tablet {
+                            max-width: 689px;
+                        }
+
+                        .img_article_projects {
+                            @include img_display;
+                        }
+                    }
+
+                    .container-txt_article_projects {
+                        .link_article_projects {
+                            .arrow_projects {
+                                @include mobile {
+                                    margin-left: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .softskills {
+            @include tablet {
+                max-width: 689px;
+                margin-bottom: 67px;
+            }
+
+            @include mobile {
+                max-width: 327px;
+                margin-bottom: 40px;
+            }
+
+            .list_softskills {
+                @include tablet {
+                    display: initial;
+                }
+
+                .item_softskills {
+                    @include tablet {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    @include mobile {
+                        flex-direction: column;
+                        margin-bottom: 80px;
+                    }
+
+                    .container-img_item_softskills {
+                        @include tablet {
+                            margin-bottom: 0px;
+                            margin-right: 48px;
+                        }
+
+                        @include mobile {
+                            margin-bottom: 48px;
+                            margin-right: 0px;
+                        }
+                    }
+
+                    .container-txt_item_softskills {
+                        @include tablet {
+                            text-align: left;
+                        }
+
+                        @include mobile {
+                            text-align: center;
+                        }
+
+                        .title_item_softskills {
+                            @include tablet {
+                                margin-bottom: 16px;
+                            }
+
+                            @include mobile {
+                                margin-bottom: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
